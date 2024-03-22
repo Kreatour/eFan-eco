@@ -47,3 +47,4 @@ window.onload = function() {
         preloader.style.display = 'none';
     }, 500);
 };
+
