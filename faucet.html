@@ -1,35 +1,25 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>eFan-Home</title>
-  <link rel="icon" href="images/eCash_logo.png" sizes="32x32" />
-
-  <!--custom css link-->
+  <title>eCash Faucet</title>
+  <!-- custom css file link  -->
   <link rel="stylesheet" href="assets/css/style.css">
+  <script src="script.js"></script>
+  <script src="assets/js/send.js"></script>
+  <script src="captcha.js"></script>
+
   <!---boxicon link-->
   <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
 
   <!--remixicons link-->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
-  <!---google fonts link-->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
-    rel="stylesheet">
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
-  <!-- 
-    - preload images
-  -->
-  <link rel="preload" as="hero-img" href="./images/GrumpyGoblin.png">
-  <link rel="preload" as="logo-box" href="./images/eFan-logo-dark.png">
 </head>
+<!-- header section starts  -->
 
 <body>
-
   <div class="header-1">
 
     <div class="logo">
@@ -48,43 +38,59 @@
 
     <div class="bx bx-menu" id="menu-icon"></div>
   </div>
-
-  <section class="hero">
-    <div class="hero-text">
-      <h1>Grumpy <br> Goblins</h1>
-      <p>We Are True eFans, True eCash Hodlers. Through Thick and Thin We Remain Grounded In Our Vision To Bring Real
-        Change &
-        Real Financial Freedom To The World</p>
-
-    </div>
-    <div class="hero-img">
-      <img src="images/GrumpyGoblin(NFT).png" alt="">
-
-    </div>
-    <!--Count Down-->
-    <div class="countdown">
-      <p class="timer-cta">Complete Site Will Be Out In: </p>
-      <ul class="timer">
-        <li>
-          <div class="time-box"><span class="time" id="days"></span> <span class="time-txt">Days</span></div>
-        </li>
-        <li>
-          <div class="time-box"><span class="time" id="hours"></span> <span class="time-txt">Hours</span></div>
-        </li>
-        <li>
-          <div class="time-box"><span class="time" id="minutes"></span> <span class="time-txt">Minutes</span></div>
-        </li>
-        <li>
-          <div class="time-box"><span class="time" id="seconds"></span> <span class="time-txt">Seconds</span></div>
-        </li>
-      </ul>
-    </div>
-  </section>
-  <div class="icons">
-    <a href="https://x.com/eFan_eco?t=NEAz2xaRKyfa09sRY92u-g&s=09"><i class="ri-twitter-line"></i></a>
-    <a href="https://t.me/eFanQuest"><i class="ri-telegram-line"></i></a>
-    <a href="#"><i class="ri-youtube-line"></i></a>
+  <div class="container">
+    <h1>eCash Faucet</h1>
+    <form id="payoutForm">
+      <div id="payoutForm">
+        <label for="recipientAddress">eCasher Address:</label>
+        <input type="text" id="recipientAddress" name="recipientAddress" placeholder="Enter eCash address">
+      </div>
+      <div class="g-recaptcha" data-sitekey="6LeaP6EpAAAAAKl7QCXA_xIreIUuTpnlDSkpi7bm"></div>
+      <div class="button-container">
+        <button type="submit" id="sendPayoutBtn" disabled>Send eCash</button>
+      </div>
+    </form>
+    <script src="assets/js/send.js"></script>
   </div>
+  <!-- category section starts  -->
+
+  <section class="category" id="category">
+
+    <div class="box-container">
+
+      <div class="box">
+        <h4>Task Wall</h4>
+        <p>Complete Tasks To Boost Payout</p>
+        <h4>Coming Soon!</h4>
+      </div>
+    </div>
+
+  </section>
+  <section class="category" id="category">
+
+    <div class="box-container">
+
+      <div class="box">
+        <h4>Support Project</h4>
+        <p>eFans is a project seeking to help in the widespread adoption
+          of eCash and its blockchain and as a result community support would be greatly
+          appreciated by the devs as it would help keep the project afloat and upto
+          date. You may donate to the faucet or developer by clicking any
+          of the buttons below</p>
+        <div class="paybtn">
+          <script src="https://unpkg.com/@paybutton/paybutton/dist/paybutton.js"></script>
+          <div class="paybutton" to="ecash:qprrfsf04w3xxrj9jeq5l3c63tfxscyzlyzu7tqmql" text="Quench Faucet"
+            success-text="That was refreshing!"></div>
+        </div>
+        <div class="paybtn">
+          <script src="https://unpkg.com/@paybutton/paybutton/dist/paybutton.js"></script>
+          <div class="paybutton" to="ecash:qzyzah2k2766k7yefv33mlj4a7ewepc9fyzkqu4urv" text="Support Devs"
+            success-text="Much appreciated, thanks!"></div>
+        </div>
+      </div>
+    </div>
+
+  </section>
   <div class="footer">
     <div>
       <img src="images/eFan-logo-dark.png" alt="Logo" style="height: 50px;">
@@ -126,38 +132,31 @@
     <div>
       <h3>Support Dev</h3>
       <script src="https://unpkg.com/@paybutton/paybutton/dist/paybutton.js"></script>
-      <div 
-         class="paybutton" 
-         to="ecash:qzyzah2k2766k7yefv33mlj4a7ewepc9fyzkqu4urv" 
-         text="Support Devs"
-         success-text="Much appreciated, thanks!"
-      ></div>
+      <div class="paybutton" to="ecash:qzyzah2k2766k7yefv33mlj4a7ewepc9fyzkqu4urv" text="Support Devs"
+        success-text="Much appreciated, thanks!"></div>
     </div>
   </div>
-  <a id="scrollUp" href="#top" style="position: fixed;">
-    <i class="ri-arrow-up-s-fill"></i></a>
-
-  <!--scrollreveal effect-->
-  <script src="https://unpkg.com/scrollreveal"></script>
+  <!-- JavaScript code to handle sending eCash -->
   <script>
-    $(document).ready(function () {
-      $(window).scroll(function () {//scroll--top---indicator---arrow-jquery----//
-        if ($(window).scrollTop() > 600) {//---position---600----px scroll-----//
-          $("#scrollUp").fadeIn();
-        }
-        else {
-          $("#scrollUp").css("display", "none");
-        }
-      });
-    });
+    function sendEcash() {
+      var recipientAddress = document.getElementById("recipient-address").value;
+
+      // Code to send eCash to the recipient address
+
+      alert("eCash sent successfully!");
+    }
+  </script>
+  <!-- JavaScript code to handle copyingg eCash address using btn -->
+  <script>
+    const copyButton = document.getElementById('copy-text')
+    copyButton.onclick = function () {
+      const content = document.getElementById('copy-text');
+      navigator.clipboard.writeText(content);
+    }
 
   </script>
-
   <!--- custom js link-->
   <script src="assets/js/reveal.js"></script>
-  <script src="assets/js/count.js"></script>
-  <script>countdown('06/25/2024 03:14:07 AM');</script>
-
 </body>
 
 </html>
