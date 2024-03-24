@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn and Earn Platform</title>
+    <style>
+        body {
+            background-color: #f0f8ff; /* Light Blue */
+            color: #ffffff; /* White */
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        video {
+            width: 100%;
+            height: auto;
+            margin-bottom: 20px;
+        }
+        button {
+            background-color: #4169e1; /* Royal Blue */
+            color: #ffffff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to Learn and Earn Platform</h1>
+        <p>Watch the video tutorial below and complete the quiz to earn eCash!</p>
+        <video controls>
+            <source src="tutorial.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <button onclick="startQuiz()">Start Quiz</button>
+    </div>
+
+    <script>
+        function startQuiz() {
+            // Add quiz logic here
+            alert('Quiz Started! Good luck!');
+        }
+    </script>
+</body>
+</html>
+
+

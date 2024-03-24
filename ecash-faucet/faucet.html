@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>eCash Faucet</title>
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="script.js"></script>
+    
+</head>
+<!-- header section starts  -->
+
+<header>
+    
+    <div class="header-1">
+
+        <div id="menu-bar" class="fas fa-bars"></div>
+        <div class="logo">
+            <!--<h1 class="text-light"><a href="index.html">CrowdFunding</a></h1>-->
+            <!-- Uncomment below if you prefer to use an image logo -->
+            <a href="index.html"><img src="images/eCash_logo.png" alt="" class="img-fluid" width=100% height=70px></a>
+        </div>
+
+        <nav class="navbar">
+            <a href="index.html">Home</a>
+            <a href="learn&earn.html">Learn & Earn</a>
+            <a href="#product">Ecosystem</a>
+            <a href="#deal">Pipeline</a>
+            <a href="faucet.html">Faucet</a>
+        </nav>
+
+    </div>
+
+</header>
+
+<body>
+    <div class="container">
+        <h1>eCash Faucet</h1>
+
+        <div class="form-group">
+            <label for="recipient-address">eCasher Address:</label>
+            <input type="text" id="recipient-address" placeholder="Enter eCash address">
+        </div>
+
+        <div class="button-container">
+            <button onclick="sendEcash()">Send eCash</button>
+        </div>
+
+        <div class="faucet-balance">
+            Faucet Balance: 1000 xec
+        </div>
+
+    </div>
+    <!-- category section starts  -->
+
+    <section class="category" id="category">
+
+        <h1 class="heading"> Donations </h1>
+
+        <div class="box-container">
+
+            <div class="box">
+                <h4>Faucet Donation</h4>
+                <p>Help keep this faucet quenched!</p>
+                <img src="images/faucet-wallet.png" alt="">
+                <div class="button-container">
+                    <button onclick="sendEcash()">Copy Address</button>
+                </div>
+            </div>
+            <div class="box">
+                <h4>Donate To Developer</h4>
+                <p>Support Further Development Of eCash Based Products</p>
+                <img src="images/My-Wallet.jpg" alt="">
+                <div class="button-container">
+                    <p id="DevAddress">ecash:qzyzah2k2766k7yefv33mlj4a7ewepc9fyzkqu4urv </p>
+                    <button onclick="copyToClipboard('#DevAddress')">Copy Address</button>
+                </div>
+            </div>
+            
+        </div>
+
+    </section>
+    <footer class="footer">
+        <ul>
+            <li><a href="#">Facebook</a></li>
+            <li><a href="#">Twitter</a></li>
+            <li><a href="#">Discord</a></li>
+            <li><a href="#">Reddit</a></li>
+        </ul>
+        <div>
+            <a href="#">Privacy</a>
+            <a href="#">Terms of Use</a>
+            <a href="#">Disclosure</a>
+        </div>
+    </footer>
+
+    <!-- JavaScript code to handle sending eCash -->
+    <script>
+        function sendEcash() {
+            var recipientAddress = document.getElementById("recipient-address").value;
+
+            // Code to send eCash to the recipient address
+
+            alert("eCash sent successfully!");
+        }
+    </script>
+    <!-- JavaScript code to handle copyingg eCash address using btn -->
+    <script>
+        const copyButton = document.getElementById('copy-text')
+        copyButton.onclick = function(){
+            const content = document.getElementById('copy-text');
+            navigator.clipboard.writeText(content);
+        }
+
+    </script>
+</body>
+
+</html>
