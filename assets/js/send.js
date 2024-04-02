@@ -7,13 +7,13 @@ recaptcha.init('6LeaP6EpAAAAACVV_3BplAEPsN4Rc6xHm8J-TaL-'); // Replace YOUR_SECR
 app.post('/payout', recaptcha.middleware.verify, async (req, res) => {
     if (!req.recaptcha.error) {
         // CAPTCHA verification successful, process payout
-        // Add your payout logic here
+        // Payout logic
         document.getElementById("payoutForm").addEventListener("submit", function (event) {
             event.preventDefault(); // Prevent form submission
 
             // Get form data
             const recipientAddress = document.getElementById("recipientAddress").value;
-            const amount = 20;
+            const amount = 50;
 
             // Create payload object
             const payload = {

@@ -1,0 +1,118 @@
+:root {
+    --blue: #007bff;
+    --black: #353b48;
+    /**
+     * radius
+     */
+
+    --radius-pill: 500px;
+    --radius-circle: 50%;
+    --radius-3: 3px;
+    --radius-5: 5px;
+    --radius-10: 10px;
+
+    /**
+      * transition
+      */
+
+    --transition-1: 0.25s ease;
+    --transition-2: 0.5s ease;
+    --cubic-in: cubic-bezier(0.51, 0.03, 0.64, 0.28);
+    --cubic-out: cubic-bezier(0.33, 0.85, 0.4, 0.96);
+}
+h1 {
+    margin-top: 50px;
+    margin-bottom: 0;
+    font-size: 38px;
+    text-align: left;
+}
+.input-wrapper {
+    margin-bottom: 20px;
+    display: none;
+}
+
+.input-wrapper.active {
+    display: block;
+    animation: fadeIn 0.9s ease forwards;
+}
+
+.input-wrapper input,
+.input-wrapper textarea {
+    width: 130%;
+    padding: 10px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-color: var(--blue);
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 255, 0.5);
+    outline: none;
+    transition: box-shadow 0.55s;
+}
+
+.input-wrapper input:not(:focus),
+.input-wrapper textarea:not(:focus) {
+    box-shadow: 0 0 10px rgba(0, 0, 255, 0.3);
+    /* Dull blue color */
+}
+
+.input-wrapper input:focus,
+.input-wrapper textarea:focus {
+    box-shadow: 0 0 20px rgba(0, 0, 255, 0.7);
+    /* Glowing blue border when focused */
+}
+#mainContainer {
+    display: grid;
+    gap: 10px;
+    column-gap: 50px;
+    margin: 0;
+
+}
+.pContainer {
+    width: 50%;
+    margin: 0 auto;
+    padding-top: 50px;
+    position: relative;
+
+}
+.button-wrapper {
+    display: flex;
+    justify-content: left;
+    margin-bottom: 30px;
+    margin-top: 20px;
+    margin-left: 0;
+    gap: 12px;
+    
+}
+
+#backBtn,
+#nextBtn,
+#doneBtn {
+    padding: 10px 20px;
+    background-color: var(--blue);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    outline: none;
+}
+#doneBtn img{
+    height: 15px;
+}
+#backBtn img,
+#nextBtn img {
+    width: 20px;
+    height: 20px;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

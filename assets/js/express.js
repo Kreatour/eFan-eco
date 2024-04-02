@@ -17,7 +17,7 @@ app.use(bodyParser.json());
 
 // BitGo configuration
 const bitgo = new BitGo({
-    accessToken: 'v2x0ffefdc0117fb5fb4d043f73c5791078aef53a159a70dbde39786488a7324eb7', // Replace with your actual BitGo access token
+    accessToken: 'v2x0ffefdc0117fb5fb4d043f73c5791078aef53a159a70dbde39786488a7324eb7', //BitGo access token
     env: 'prod' // or 'prod' for production
 });
 
@@ -38,7 +38,7 @@ const limiter = rateLimit({
     message: "You have exceeded the rate limit for eCash payouts."
 });
 
-// Apply rate limiting middleware to the eCash payout endpoint
+// Applying rate limiting middleware to the eCash payout endpoint
 app.post('/payout', limiter, async (req, res) => {
     try {
         // Extract recipient address and amount from request body
@@ -60,7 +60,7 @@ app.post('/payout', limiter, async (req, res) => {
 
 // Function to generate eCash transaction
 async function generateTransaction(recipientAddress, amount) {
-    // You need to implement this function to generate eCash transaction using BitGo UTXO library
+    // function to generate eCash transaction using BitGo UTXO library
     // This function should construct and sign the transaction
     // Example:
     // const tx = new BitGo.TransactionBuilder(network);
