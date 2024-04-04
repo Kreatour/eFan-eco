@@ -467,6 +467,7 @@ section {
   .hero-text p {
     font-size: 20px;
     margin: 10px;
+    text-align: center;
   }
 }
 
