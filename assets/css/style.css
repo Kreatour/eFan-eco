@@ -294,7 +294,7 @@ input[type="text"] {
 --------------------------------------------------------------*/
 .hero {
   height: 100%;
-  width: 100%;
+  width: auto;
   min-height: 100vh;
   background: linear-gradient(245.59deg, #f0f5ff 0%, #ebdfb971 28.53%, #ffebcd 75.52%);
   position: relative;
