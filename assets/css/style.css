@@ -330,7 +330,7 @@ section {
   font-size: 90px;
   line-height: 1;
   color: black;
-  margin: 0 0 45px;
+  margin: 25px;
 }
 
 .hero-text h4 {
@@ -350,7 +350,8 @@ section {
 .hero-img img {
   width: 680px;
   height: auto;
-  margin: 10px;
+  margin-left: 15px;
+   margin-right: 15px;
 }
 
 .logo-box img {
