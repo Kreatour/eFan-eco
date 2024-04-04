@@ -351,8 +351,7 @@ section {
 .hero-img img {
   width: 680px;
   height: auto;
-  margin-left: 25px;
-  margin-right: 25px;
+  margin-left: 0;
 }
 
 .logo-box img {
