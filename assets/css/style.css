@@ -274,7 +274,7 @@ input[type="text"] {
   background-color: var(--blue);
   color: white;
   font-size: 30px;
-  padding: 20px;
+  padding: 15px;
   border-radius: var(--radius-circle);
   text-align: center;
   z-index: 10004;
@@ -309,7 +309,7 @@ input[type="text"] {
   min-height: 100vh;
   background: linear-gradient(245.59deg, #f0f5ff 0%, #ebdfb971 28.53%, #ffebcd 75.52%);
   position: relative;
-  display: block;
+  display: inline-block;
   align-items: center;
   gap: 2rem;
 }
@@ -348,8 +348,9 @@ section {
 }
 
 .hero-img img {
-  width: 700px;
+  width: 680px;
   height: auto;
+  margin: 10px;
 }
 
 .logo-box img {
@@ -362,7 +363,8 @@ section {
   top: 50%;
   padding: 0 9%;
   transform: translateY(-50%);
-  border-bottom: 0px solid transparent;
+  border-bottom: none;
+  list-style: none;
 
 }
 
@@ -462,7 +464,7 @@ section {
 
   .hero-text p {
     font-size: 20px;
-    margin-bottom: 50px;
+    margin-bottom: 10px;
   }
 }
 
@@ -473,7 +475,7 @@ section {
   }
 
   .hero-text {
-    padding-top: 115px;
+    padding-top: 30px;
   }
 
   .hero-img {
@@ -481,7 +483,7 @@ section {
   }
 
   .hero-img img {
-    width: 420px;
+    width: 390px;
     height: auto;
   }
 
@@ -497,7 +499,7 @@ section {
 }
 
 
-@media (max-width: 680px) {
+@media (max-width: 660px) {
   .hero-img {
     width: 100%;
     height: auto;

@@ -7,12 +7,12 @@
     min-height: 100vh;
     background: linear-gradient(245.59deg, #f0f5ff 0%, #ebdfb971 28.53%, #ffebcd 75.52%);
     position: relative;
+    display: grid;
     grid-template-columns: repeat(2, 1fr);
     align-items: center;
     gap: 2rem;
-}
-
-#faucetHero {
+  }
+  #faucetHero{
     height: 100%;
     width: auto;
     min-height: 100vh;
@@ -21,54 +21,62 @@
     display: inline-block;
     align-items: center;
     gap: 2rem;
-}
-
-.hero-text h5 {
+  }
+  
+  section {
+    padding: 0 19%;
+  }
+  
+  .hero-text h5 {
     font-size: 14px;
     font-weight: 400;
     color: white;
     margin-bottom: 40px;
-}
-
-.hero-text h1 {
+  }
+  
+  .hero-text h1 {
     font-family: 'Permanent Marker', cursive;
     font-size: 90px;
     line-height: 1;
     color: black;
     margin: 0 0 45px;
-}
-
-.hero-text h4 {
+  }
+  
+  .hero-text h4 {
     color: var(--eerie-black-1);
     font-size: var(--fs-4);
     text-align: center;
     margin-block: 18px 20px;
-}
-
-.hero-text p {
+  }
+  
+  .hero-text p {
     font-size: 25px;
     line-height: 1.9;
     color: black;
     margin-bottom: 20px;
-}
-
-.hero .container {
-    width: 80%;
-    margin: 0 auto;
-    padding: 20px 0;
-
-}
-
-.icons {
+  }
+  
+  .hero-img img {
+    width: 680px;
+    height: auto;
+    margin: 10px;
+  }
+  
+  .logo-box img {
+    max-width: 360px;
+    position: relative;
+  }
+  
+  .icons {
     position: absolute;
     top: 50%;
     padding: 0 9%;
     transform: translateY(-50%);
     border-bottom: 0px solid transparent;
-
-}
-
-.icons i {
+  
+  }
+  
+  .icons i {
     display: block;
     margin: 26px 0;
     font-size: 30px;
@@ -76,10 +84,12 @@
     transition: all .50s ease;
     list-style: none;
     text-decoration: none;
-
-}
-
-.icons i:hover {
+  
+  }
+  
+  .icons i:hover {
     color: #007bff;
     transform: translateY(-5px);
-}
+  }
+  
+  

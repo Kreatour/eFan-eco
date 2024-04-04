@@ -330,7 +330,7 @@ body {
     background-color: var(--blue);
     color: white;
     font-size: 30px;
-    padding: 20px;
+    padding: 15px;
     border-radius: var(--radius-circle);
     text-align: center;
     z-index: 10004;
