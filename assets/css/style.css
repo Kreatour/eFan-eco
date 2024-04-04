@@ -344,7 +344,8 @@ section {
   font-size: 25px;
   line-height: 1.9;
   color: black;
-  margin: 10px
+  margin: 10px;
+  text-align: center;
 }
 
 .hero-img img {
