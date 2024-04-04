@@ -265,7 +265,6 @@ body {
     color: #000;
     padding: 20px;
     display: flex;
-    width: 100%;
     align-items: center;
     justify-content: space-evenly;
     flex-wrap: wrap;
