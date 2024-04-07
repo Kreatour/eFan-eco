@@ -164,7 +164,7 @@ input[type="text"] {
 # Categories
 --------------------------------------------------------------*/
 .category .box-container {
-  display: flex;
+  display: flexbox;
   gap: 1.5rem;
   flex-wrap: wrap;
   padding-top: 0rem;
