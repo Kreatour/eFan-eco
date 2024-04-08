@@ -311,7 +311,7 @@ input[type="text"] {
   position: relative;
   display: inline-grid;
   align-items: center;
-  grid-template-rows: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 0.5fr);
   gap: 2rem;
 }
 
