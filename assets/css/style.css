@@ -306,13 +306,13 @@ input[type="text"] {
 #faucetHero{
   height: 100%;
   width: auto;
-  min-height: 100vh;
+  min-height: 50vh;
   background: linear-gradient(245.59deg, #f0f5ff 0%, #ebdfb971 28.53%, #ffebcd 75.52%);
   position: relative;
   display: grid;
   align-items: center;
   grid-template-rows: repeat(2, 1fr);
-  gap: 0.5rem;
+  gap: 2rem;
 }
 
 section {
