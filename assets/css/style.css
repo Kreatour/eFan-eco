@@ -309,7 +309,7 @@ input[type="text"] {
   min-height: 100vh;
   background: linear-gradient(245.59deg, #f0f5ff 0%, #ebdfb971 28.53%, #ffebcd 75.52%);
   position: relative;
-  display: block;
+  display: flex;
   align-items: center;
   gap: 2rem;
 }
