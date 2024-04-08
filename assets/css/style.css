@@ -164,7 +164,7 @@ input[type="text"] {
 # Categories
 --------------------------------------------------------------*/
 .category .box-container {
-  display: flex;
+  display: flexbox;
   gap: 1.5rem;
   flex-wrap: wrap;
   padding-top: 0rem;
@@ -309,7 +309,7 @@ input[type="text"] {
   min-height: 100vh;
   background: linear-gradient(245.59deg, #f0f5ff 0%, #ebdfb971 28.53%, #ffebcd 75.52%);
   position: relative;
-  display: inline-grid;
+  display: grid;
   align-items: center;
   grid-template-rows: repeat(2, 0.5fr);
   gap: 2rem;
