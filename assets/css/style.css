@@ -164,7 +164,7 @@ input[type="text"] {
 # Categories
 --------------------------------------------------------------*/
 .category .box-container {
-  display: flex;
+  display: flexbox;
   gap: 1.5rem;
   flex-wrap: wrap;
   padding-top: 0rem;
@@ -200,96 +200,6 @@ input[type="text"] {
 .category .box-container .box .btn {
   display: block;
 }
-
-/*--------------------------------------------------------------
-# Footer
---------------------------------------------------------------*/
-
-.footer {
-  background-color: #f8f8f8;
-  color: #000;
-  padding: 20px;
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-  flex-wrap: wrap;
-  box-shadow: 0 .8rem 1rem rgba(0, 0, 0, .1);
-}
-
-.footer ul {
-  align-items: center;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.footer ul li {
-  margin-right: 20px;
-}
-
-.footer ul li a {
-  color: #000;
-  text-decoration: none;
-  font-size: 16px;
-  font-weight: bold;
-  padding: 10px;
-}
-
-.social-icons {
-  margin-top: 20px
-}
-
-.social-icons a {
-  padding: -10px;
-  display: inline-block;
-  text-decoration: none;
-  margin-right: 10px;
-}
-
-.social-icons a:hover,
-.social-icons a:active,
-.social-icons a:visited {
-  color: #fff;
-}
-
-.social-icons svg {
-  fill: black;
-  transition: all.2s ease-in-out;
-  width: 20px;
-}
-
-.social-icons a:hover svg {
-  transform: scale(1.4);
-}
-
-/*-----------------------------------*\
-  #BACK TO TOP
-\*-----------------------------------*/
-
-.back-top-btn {
-  position: fixed;
-  bottom: 40px;
-  height: 30px;
-  width: 30px;
-  right: 50px;
-  background-color: var(--blue);
-  color: white;
-  font-size: 30px;
-  padding: 15px;
-  border-radius: var(--radius-circle);
-  text-align: center;
-  z-index: 10004;
-  opacity: 0;
-  pointer-events: none;
-  transition: var(--transition-1);
-}
-
-.back-top-btn.active {
-  transform: translateY(10px);
-  opacity: 1;
-  pointer-events: all;
-}
-
 /*--------------------------------------------------------------
 # Hero
 --------------------------------------------------------------*/
@@ -310,8 +220,9 @@ input[type="text"] {
   min-height: 100vh;
   background: linear-gradient(245.59deg, #f0f5ff 0%, #ebdfb971 28.53%, #ffebcd 75.52%);
   position: relative;
-  display: inline-block;
+  display: grid;
   align-items: center;
+  grid-template-rows: repeat(2, 0.5fr);
   gap: 2rem;
 }
 
