@@ -223,7 +223,7 @@ input[type="text"] {
   display: grid;
   align-items: center;
   grid-template-rows: repeat(2, 0.5fr);
-  gap: 2rem;
+  gap: 0rem;
 }
 
 section {
