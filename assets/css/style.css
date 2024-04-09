@@ -220,7 +220,7 @@ input[type="text"] {
   min-height: 100vh;
   background: linear-gradient(245.59deg, #f0f5ff 0%, #ebdfb971 28.53%, #ffebcd 75.52%);
   position: relative;
-  display: grid;
+  display: block;
   align-items: center;
   grid-template-rows: repeat(2, 1fr);
   gap: 2rem;
