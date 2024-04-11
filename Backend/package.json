@@ -1,0 +1,14 @@
+{
+    "name": "ecash-faucet",
+    "version": "1.0.0",
+    "description": "eCash faucet backend",
+    "main": "express.js",
+    "scripts": {
+      "start": "node express.js"
+    },
+    "dependencies": {
+      "express": "^4.17.1",
+      "bitgo": "^0.2.2"
+    }
+  }
+  
