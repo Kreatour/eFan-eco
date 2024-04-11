@@ -1,8 +1,9 @@
 const express = require('express');
 const bodyParser = require('body-parser');
-const BitGo = require('bitgo-utxo-lib');
 const rateLimit = require("express-rate-limit");
 const RedisStore = require("rate-limit-redis");
+const BitGo = require('bitgo-utxo-lib');
+const recaptcha = require('express-recaptcha');
 
 let sender ={
     addr: 'ecash:qprrfsf04w3xxrj9jeq5l3c63tfxscyzlyzu7tqmql',
@@ -12,14 +13,17 @@ let sender ={
 // Create an Express application
 const app = express();
 
-// Middleware to parse JSON bodies
-app.use(bodyParser.json());
-
 // BitGo configuration
 const bitgo = new BitGo({
     accessToken: 'v2x0ffefdc0117fb5fb4d043f73c5791078aef53a159a70dbde39786488a7324eb7', //BitGo access token
     env: 'prod' // or 'prod' for production
 });
+
+// Middleware to parse JSON bodies
+app.use(bodyParser.json());
+
+// Configure reCAPTCHA
+recaptcha.init('6LeaP6EpAAAAAKl7QCXA_xIreIUuTpnlDSkpi7bm', '6LeaP6EpAAAAACVV_3BplAEPsN4Rc6xHm8J-TaL-');
 
 // Rate limiting configuration
 const limiter = rateLimit({
@@ -39,19 +43,25 @@ const limiter = rateLimit({
 });
 
 // Applying rate limiting middleware to the eCash payout endpoint
-app.post('/payout', limiter, async (req, res) => {
+app.post('/payout', limiter, recaptcha.middleware.verify, async (req, res) => {
     try {
-        // Extract recipient address and amount from request body
-        const { recipientAddress, amount } = req.body;
+        // Check if reCAPTCHA verification passed
+        if (!req.recaptcha.error) {
+            // Extract recipient address and amount from request body
+            const { recipientAddress, amount } = req.body;
 
-        // Generate eCash transaction
-        const transaction = await generateTransaction(recipientAddress, amount);
+            // Generate eCash transaction
+            const transaction = await generateTransaction(recipientAddress, amount);
 
-        // Broadcast transaction to eCash network
-        const result = await bitgo.sendTransaction(transaction);
+            // Broadcast transaction to eCash network
+            const result = await bitgo.sendTransaction(transaction);
 
-        // Send response with transaction hash
-        res.json({ success: true, transactionHash: result.transactionHash });
+            // Send response with transaction hash
+            res.json({ success: true, transactionHash: result.transactionHash });
+        } else {
+            // reCAPTCHA verification failed
+            res.status(400).json({ success: false, message: 'reCAPTCHA verification failed' });
+        }
     } catch (error) {
         // Handle errors
         res.status(500).json({ success: false, error: error.message });
@@ -85,7 +95,6 @@ async function generateTransaction(recipientAddress, amount) {
         throw new Error('Failed to generate transaction: ' + error.message);
     }
 }
-  
 
 // Start the server
 const PORT = process.env.PORT || 3000;
