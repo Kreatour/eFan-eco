@@ -4,7 +4,7 @@
     "description": "eCash faucet backend",
     "main": "express.js",
     "scripts": {
-      "start": "node express.js"
+      "start": "node payout.js"
     },
     "dependencies": {
       "express": "^4.17.1",
