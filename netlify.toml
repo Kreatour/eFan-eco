@@ -1,3 +1,4 @@
 [build]
   functions = "functions"    # Specify the directory where your serverless functions are located
   publish = "public"         # Specify the directory where your frontend code is located
+  package = "@netlify/plugin-functions-install-core"
