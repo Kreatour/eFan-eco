@@ -8,7 +8,8 @@
     },
     "dependencies": {
       "express": "^4.17.1",
-      "bitgo": "^0.2.2"
+      "bitgo": "^0.2.2",
+      "new-dependency": "^1.0.0"
     }
   }
   
