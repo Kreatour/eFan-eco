@@ -6,8 +6,8 @@ const BitGo = require('bitgo-utxo-lib');
 const recaptcha = require('express-recaptcha');
 
 let sender ={
-    addr: sender_address,
-    privateKey: eCash_Skey
+    addr: 'ecash:qprrfsf04w3xxrj9jeq5l3c63tfxscyzlyzu7tqmql',
+    privateKey: 'save bag accuse spare material mountain brave wife brief verb damage culture'
 }
 
 // Create an Express application
@@ -15,7 +15,7 @@ const app = express();
 
 // BitGo configuration
 const bitgo = new BitGo({
-    accessToken: Bitgo_accessToken, //BitGo access token
+    accessToken: 'v2x0ffefdc0117fb5fb4d043f73c5791078aef53a159a70dbde39786488a7324eb7', //BitGo access token
     env: 'prod' // or 'prod' for production
 });
 
@@ -23,7 +23,7 @@ const bitgo = new BitGo({
 app.use(bodyParser.json());
 
 // Configure reCAPTCHA
-recaptcha.init('6LeaP6EpAAAAAKl7QCXA_xIreIUuTpnlDSkpi7bm', captcha_Skey);
+recaptcha.init('6LeaP6EpAAAAAKl7QCXA_xIreIUuTpnlDSkpi7bm', '6LeaP6EpAAAAACVV_3BplAEPsN4Rc6xHm8J-TaL-');
 
 // Rate limiting configuration
 const limiter = rateLimit({
