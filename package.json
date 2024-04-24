@@ -9,6 +9,7 @@
     "dependencies": {
       "express": "^4.17.1",
       "bitgo": "^38.1.0",
+      "rate-limit-redis": "^4.2.0",
       "express-rate-limit": "^5.3.0"
     }
   }
